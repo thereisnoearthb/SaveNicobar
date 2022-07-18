@@ -27,6 +27,10 @@
           Send Mail
           <i class="material-icons right">send</i>
         </button>
+        <button id="share" class="btn black waves-effect waves-light" type="submit" name="action">
+          Share
+          <i class="material-icons right">share</i>
+        </button>
       </p>
       <main id="content">
         <p>
@@ -221,6 +225,13 @@
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
+      });
+      document.getElementById('share').addEventListener('click', () => {
+        navigator.share({
+          title: 'Sign the Save Nicobar Petition Now!',
+          text: 'Sign the Save Nicobar Petition Now!',
+          url: 'https://savenicobar.thereisnoearthb.com'
+        });
       });
     </script>
   </body>
