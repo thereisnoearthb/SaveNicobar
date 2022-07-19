@@ -22,8 +22,11 @@
     color: black; 
     font-size: 13px;
 }
+.carousel{
+  height: 600px !important;
+}
 .carousel-wrapper{
-    height:400px;
+    height:600px;
     position:relative;
     width:85%;
     margin:0 auto;
@@ -67,6 +70,9 @@
     .carousel-wrapper{
         width: 80%;
         height: 400px;
+    }
+    .carousel{
+      height: 400px !important;
     }
         .arrow, .light .arrow {
           background-size: 10px;
