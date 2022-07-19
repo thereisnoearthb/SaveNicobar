@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .org-img-div {
@@ -11,11 +12,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1em 0;
 }
 
 .org-img {
   border-radius: 100%;
-  width: 50%;
+  width: 75%;
   max-width: 10em;
 }
 
