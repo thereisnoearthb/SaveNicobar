@@ -13,7 +13,7 @@
 }
 .org-img{
     border-radius: 100%; 
-    width: 90%; 
+    width: 50%; 
     max-width: 10em;
 }
 .img-link{
@@ -138,5 +138,10 @@
     }
 
   
-  
-  
+  .row{
+    display: flex;
+  }
+  .column{
+    width: 33.3%;
+    text-align: center;
+  }
