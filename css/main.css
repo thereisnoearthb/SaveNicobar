@@ -1,3 +1,13 @@
+.gallery-cell {
+  width: 100%;
+  height: 600px;
+}
+.gallery-cell:before {
+  display: block;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
 .org-logo {
   margin: 0 auto;
   width: 100%;
@@ -52,7 +62,7 @@
   height: auto;
 }
 
-.arrow {
+/* .arrow {
   border: solid black;
   border-width: 0 5px 5px 0;
   display: inline-block;
@@ -71,7 +81,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
-}
+} */
 
 .light {
   color: white;
@@ -84,24 +94,22 @@
     max-height: 440px !important;
   }
 
-  .arrow,
+  /* .arrow,
   .light .arrow {
     background-size: 10px;
     background-position: 10px 50%;
-  }
+  } */
 }
 
 /*Select every element*/
-[id^="item"] {
-  display: none;
-}
+
 
 .card .card-image img {
   max-width: 100% !important;
   max-height: 100% !important;
 }
 
-.item-1 {
+/* .item-1 {
   z-index: 2;
   opacity: 1;
 }
@@ -123,7 +131,7 @@
 #item-8:target~.item-8 {
   z-index: 3;
   opacity: 1;
-}
+} */
 
 .row {
   display: flex;
