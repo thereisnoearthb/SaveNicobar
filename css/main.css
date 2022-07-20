@@ -8,6 +8,9 @@
   font-size: 80px;
   color: white;
 }
+.flickity-button{
+  opacity: 0.6 !important;
+}
 .org-logo {
   margin: 0 auto;
   width: 100%;
