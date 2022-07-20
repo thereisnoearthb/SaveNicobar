@@ -9,7 +9,7 @@
   color: white;
 }
 .flickity-button{
-  opacity: 0.6 !important;
+  background: transparent;
 }
 .org-logo {
   margin: 0 auto;
