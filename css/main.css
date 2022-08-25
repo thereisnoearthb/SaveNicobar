@@ -158,8 +158,8 @@
     border-radius: 5%;
     text-decoration: none;
     margin: 5px 2px;
-    background: #55ACEE;
-    color: white;
+    background: #55ACEE !important;
+    color: white !important;
 }
 
 .fa:hover {
