@@ -165,6 +165,10 @@
 .fa:hover {
     opacity: 0.7;
 }
+#emailInput{
+  color: black;
+  font-size: 15px;
+}
 /* .fa-twitter {
   background: #55ACEE;
   color: white;

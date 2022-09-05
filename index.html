@@ -199,7 +199,7 @@ September 19, 2021</p>-->
                 </p>
                 <br>
                 <p>
-                  532 people have sent the email so far,<br> send yours now! ✊
+                  <label id="emailInput"></label> people have sent the email so far,<br> send yours now! ✊
                 </p>
                 <br>
                 <p>Also, Tweet to spread the word.</p>
@@ -338,6 +338,8 @@ September 19, 2021</p>-->
       <!--<a class="link" id="Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveNicobar which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>-->
       </header>
       <script type="text/javascript">
+        var emailSent=532;
+        document.getElementById('emailInput').innerHTML = emailSent;
         document.addEventListener('DOMContentLoaded', function () {
           M.AutoInit();
 
@@ -349,7 +351,7 @@ September 19, 2021</p>-->
           console.log(elems);
           var instances = M.Carousel.init(elems, options);
         })
-        document.getElementById('tweet-quote').setAttribute('href','https://twitter.com/intent/tweet/?text='+ "Save 8.5 Lakh Trees from being felled in India's rainforest.%0AJoin 532 people and %23SaveNicobar by sending an email to @moefcc now!%0A@vrikshit @rotaractusme @Youth4ClimateIn @nitara_in @FFFIndia @IndiaRebellion%0ASend Your Mail here-> https://t.co/bziqGgZLKa https://t.co/FC5Fvh7mRX");
+        document.getElementById('tweet-quote').setAttribute('href','https://twitter.com/intent/tweet/?text='+ "Save 8.5 Lakh Trees from being felled in India's rainforest.%0AJoin "+emailSent+ " people and %23SaveNicobar by sending an email to @moefcc now!%0A@vrikshit @rotaractusme @Youth4ClimateIn @nitara_in @FFFIndia @IndiaRebellion%0ASend Your Mail here-> https://t.co/bziqGgZLKa https://t.co/FC5Fvh7mRX");
       </script>
   </body>
 
