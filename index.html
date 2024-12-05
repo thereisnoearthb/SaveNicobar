@@ -1,588 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Save Nicobar">
+    <meta property="og:description" content="A citizen's movement to Save Indian Biodiversity in Nicobar">
+    <meta name="description" content="Save Nicobar: Movement to save the biodiversity of India's rainforest">
+    <meta property="og:image" content="http://savenicobar.thereisnoearthb.com/pictures/Social%20Preview%20of%20Links.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="keywords" content="Environment, Nicobar, Great Nicobar Islands, Save Nicobar campaign, islands, Protected ">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Save Nicobar">
+    <meta property="og:locale" content="en_US">
+    <meta name="author" content="Save Nicobar Campaign">
+    <meta name="geo.region" content="IN">
+    <meta name="twitter:card" content="summary_large_image">
 
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <meta property="og:title" content="Save Nicobar" />
-  <meta property="og:description" content="A citizen's movement to Save Indian Biodiversity in Nicobar" />
-  <meta name="description" content="A citizen's movement to Save Indian Biodiversity in Nicobar">
-  <meta property="og:image"
-    content="http://savenicobar.thereisnoearthb.com/pictures/Social%20Preview%20of%20Links.jpg" />
+    <title>Save Nicobar</title>
+    
+    <!-- SEO Optimization -->
+     <meta name="description" content="A citizen's movement to Save Indian Biodiversity in Nicobar">
+     <meta name="robots" content="index, follow">
+     
+    <!-- Preload Critical Assets -->
+     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style">
+     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap" as="style">
+     <link rel="icon" href="https://thereisnoearthb.com/TINEB_LOGO.jpeg" type="image/x-icon">
+     
+    <!-- External Stylesheets -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Open+Sans:wght@400;600&amp;display=swap">
 
-  <meta property="og:image:type" content="image/png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="title" content="Save Nicobar: Movement to save the biodiversity of India's rainforest">
-  <title>Save Nicobar: Movement to save the biodiversity of India's rainforest</title>
-  <meta property="keywords"
-    content="Environment, Nicobar, Great Nicobar Islands, Save Nicobar campaign, islands, Protected ">
-
-
-  <link rel="icon" href="https://thereisnoearthb.com/TINEB_LOGO.jpeg" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--   <link rel='stylesheet' id='hive-style-css' href='https://thereisnoearthb.com/styled.css' type='text/css' media='all' />
-<link rel='stylesheet' id='hive-fonts-css' href='https://fonts.googleapis.com/css?family=Noto%20Serif%3A400%2C700%2C400italic%7CPlayfair%20Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
-<link rel="stylesheet" href="progressbar.css">
--->
-
-  <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="https://thereisnoearthb.com/css/materialize.css"
-    media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="https://thereisnoearthb.com/style.css" media="screen,projection" />
-  <!--
-      Import Google Icon Font
-      Theme sourced from https://materializecss.com/getting-started.html
-      -->
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS for Carousel -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+     
+     <style>
+         /* Reset and Base Styles */
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+         
+         body {
+             font-family: 'Open Sans', sans-serif;
+             background-color: #f4f4f4;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             min-height: 100vh;
+             padding: 20px;
+         }
+         
+         /* Title Styles */
+         .page-title {
+             font-family: 'Playfair Display', serif;
+             font-size: 2.5rem;
+             color: black;
+             text-align: center;
+             margin-bottom: 20px;
+         }
+         
+         /* Card Styles */
+         .campaign-card {
+             background-color: #f9f9f9;
+             border-radius: 15px;
+             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+             width: 100%;
+             max-width: 350px;
+             overflow: hidden;
+             margin-bottom: 20px;
+         }
+         
+         /* Carousel Styles */
+         .swiper {
+             aspect-ratio: 1 / 1;        }
+         
+         .swiper-slide img {
+             width: 100%;
+             height: auto;
+             object-fit: cover;
+         }
+         
+         /* Card Content Styles */
+         .card-content {
+             padding: 15px;
+         }
+         
+         .card-text {
+             margin-bottom: 15px;
+             line-height: 1.6;
+         }
+         
+         /* Social Button Styles */
+         .social-buttons {
+             display: flex;
+             justify-content: center;
+             gap: 15px;
+             padding: 15px 0;
+         }
+         
+         .social-btn {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-decoration: none;
+             transition: transform 0.2s;
+         }
+         
+         .social-btn:hover {
+             transform: scale(1.1);
+         }
+         
+         .email-btn {
+             background-color: #ff4d4d;
+             color: white;
+         }
+         
+         .twitter-btn {
+             background-color: #1DA1F2;
+             color: white;
+         }
+         
+         .whatsapp-btn {
+             background-color: #25D366;
+             color: white;
+         }
+         
+         .instagram-btn {
+             background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+             color: white;
+         }
+         
+         /* Link Buttons */
+         .link-button {
+             display: block;
+             width: 100%;
+             max-width: 350px;
+             background-color: white;
+             color: black;
+             text-align: center;
+             padding: 15px;
+             margin-bottom: 15px;
+             border-radius: 10px;
+             text-decoration: none;
+             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+             transition: transform 0.2s, box-shadow 0.2s;
+         }
+         
+         .link-button:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+         }
+     </style>
 </head>
-
-
 <body>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <center>
-    <!--<img height="196vw" src="pictures/logo.jpeg" alt="SaveKumaon logo">-->
-    <h1 style="font-size: 3.56rem;">
-      SAVE NICOBAR
-    </h1>
-  </center>
-  <!--<a href="https://twitter.com/search?q=saveNicobar&src=typed_query&f=live" id="userName">#SaveNicobar</a>-->
-
-
-
-  <div id="links">
-    <!--<a  href="https://instagram.com/savedumna" target="_blank"><img src="https://thereisnoearthb.com/icons/icons/instagram.svg" alt="Instagram icon" width="35" height="145"></a>-->
-
-
-
-    <div class="row container">
-      <div class="">
-        <strong>
-          <div class="yellow card">
-            <div class="card-image large">
-              <div class="carousel carousel-slider no-autoinit">
-                <!-- <div class="carousel-wrapper js-flickity">
-                    <span id="item-1"></span>
-                    <span id="item-2"></span>
-                    <span id="item-3"></span>
-                    <span id="item-4"></span>
-                    <span id="item-5"></span>
-                    <span id="item-6"></span>
-                    <span id="item-7"></span>
-                    <span id="item-8"></span>
-                    <div class="carousel-items item-1">
-                      <img src="pictures/IMG_20220719_005419_301.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-8"></a>
-                      <a class="arrow arrow-next" href="#item-2"></a>
-                    </div>
-                    <div class="carousel-items item-2">
-                      <img src="pictures/IMG_20220719_005421_292.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-1"></a>
-                      <a class="arrow arrow-next" href="#item-3"></a>
-                    </div>
-                    <div class="carousel-items item-3">
-                      <img src="pictures/IMG_20220719_005423_302.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-2"></a>
-                      <a class="arrow arrow-next" href="#item-4"></a>
-                    </div>
-                    <div class="carousel-items item-4">
-                      <img src="pictures/IMG_20220719_005425_013.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-3"></a>
-                      <a class="arrow arrow-next" href="#item-5"></a>
-                    </div>
-                    <div class="carousel-items item-5">
-                      <img src="pictures/IMG_20220719_005426_581.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-4"></a>
-                      <a class="arrow arrow-next" href="#item-6"></a>
-                    </div>
-                    <div class="carousel-items item-6">
-                      <img src="pictures/IMG_20220719_005427_457.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-5"></a>
-                      <a class="arrow arrow-next" href="#item-7"></a>
-                    </div>
-                    <div class="carousel-items item-7">
-                      <img src="pictures/IMG_20220719_005429_690.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-6"></a>
-                      <a class="arrow arrow-next" href="#item-8"></a>
-                    </div>
-                    <div class="carousel-items item-8">
-                      <img src="pictures/IMG_20220719_005431_457.jpg" alt="Save Nicobar">
-                      <a class="arrow arrow-prev" href="#item-7"></a>
-                      <a class="arrow arrow-next" href="#item-1"></a>
-                    </div>
-                  </div> -->
-                <div class="gallery js-flickity">
-                  <div class="gallery-cell">
-                    <img src="pictures/a.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/b.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/c.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/d.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/e.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/f.png" alt="Save Nicobar">
-
-                  </div>
-                  <div class="gallery-cell">
-                    <img src="pictures/g.png" alt="Save Nicobar">
-
-                  </div>
-                  <!--<div class="gallery-cell">
-                      <img src="pictures/h.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/IMG_20220719_005426_581.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/5.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/IMG_20220719_005427_457.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/6.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/IMG_20220719_005429_690.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/7.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/IMG_20220719_005431_457.jpg" alt="Save Nicobar">
-
-                    </div>
-                    <div class="gallery-cell">
-                      <img src="pictures/8.jpg" alt="Save Nicobar">
-
-                    </div>-->
-                </div>
-              </div>
-
-              <span class="card-title"></span>
-              <!--        <a href="https://maps.google.com/?q=29.512407,79.623319&entry=gps" target="_blank" class="btn-floating halfway-fab waves-effect waves-light btn-large blue pulse"><i class="large material-icons">share</i></a>
--->
-
-              <!--https://www.instagram.com/p/CUAZBsPL3YA/-->
-            </div>
-            <div class="card-content">
-              <!--<p>The villagers of Nicobar, Peora, Diyari, Chatola and neighboring areas, as well as youth leaders,
-environmentalists, NGOs and citizens who are deeply concerned about the installation of an illegal
-borewell in Nicobar, will stage a peaceful ‘Dharna’ at the borewell site in Nicobar at 11.30 AM on Sunday,
-September 19, 2021</p>-->
-              <p>
-                A Citizens' appeal for the rollback of the proposed mega infrastructure project on Great Nicobar
-                Island which involves the construction of a transshipment hub and other interlinked projects which are
-                to come up on the eastern side of the Great Nicobar Island, including Galathea Bay.
-              </p>
-              <br>
-              <p>
-                <label id="emailInput"></label>+ people have sent the email so far,<br> send yours now! ✊
-              </p>
-              <br>
-              <p>Also, Tweet to spread the word.</p>
-              <a id="tweet-quote" target="_blank" class='fa fa-twitter' title="Tweet this Quote!"> Tweet!
-              </a>
-              <a href="mail.html" target="_blank"
-                class="btn-floating halfway-fab waves-effect waves-light btn-large red pulse">
-                <i class="large material-icons">forward_to_inbox</i>
-              </a>
-            </div>
-          </div>
-      </div>
-    </div>
-
-    <br>
-    <div class="row container">
-      <div class="">
-
-
-
-
-        <a class="link" href="https://www.canva.com/design/DAFRh4x1eaU/VeMLFN4M8h7C6Gigp0GGOw/edit?utm_content=DAFRh4x1eaU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-          target="_blank">
-          Add your logo to the canva design and share </a>
-
-        <!-- the following code is from the spreadsheet-->
-        <a class="link"
-          href="https://geographical.co.uk/culture/shompen-india-government-genocide-great-nicobar-island"
-          target="_blank">
-          ‘It will destroy them’: Indian mega-development could cause ‘genocide’ and ‘ecocide’, says charity | Geographical | 08/02/24
-        </a>
-        <a class="link"
-          href="https://m.thewire.in/article/rights/death-knell-for-shompen-people-genocide-experts-urge-president-to-stop-great-nicobar-mega-project"
-          target="_blank">
-          'Death Knell for Shompen People': Genocide Experts Urge President to Stop Great Nicobar Mega Project | The Wire | 07/02/24
-        </a>
-        <a class="link"
-          href="https://www.steelorbis.com/steel-news/latest-news/india-announces-5-billion-project-to-build-transhipment-port-at-nicobar-islands-1316643.htm"
-          target="_blank">
-          India announces $5 billion project to build transhipment port at Nicobar Islands | Steel Orbis | 28/11/23
-        </a>
-        <a class="link"
-          href="https://countercurrents.org/2023/11/the-great-nicobar-island-mega-project-and-the-recent-amendment-to-the-forest-conservation-act-in-violation-of-the-supreme-courts-directions/"
-          target="_blank">
-          The Great Nicobar Island mega project and the recent amendment to the Forest (Conservation) Act in violation
-          of the Supreme Court’s directions | Counter Currents | 27/11/23
-        </a>
-
-        <a class="link"
-          href="https://feminisminindia.com/2023/08/03/indigenous-ecologies-exploitative-tourism-great-nicobar-goa/"
-          target="_blank">
-          Indigenous Ecologies And Exploitative Tourism: The Case Of Great Nicobar, Nagarahole, Goa And Other
-          “Protected” Regions | Feminism in India | 03/08/23
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/news/national/india-adds-664-animal-species-to-its-faunal-database-in-2022-339-taxa-to-its-flora/article67030167.ece"
-          target="_blank">
-          India adds 664 animal species to its faunal database in 2022, 339 taxa to its flora | The Hindu | 01/07/23
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/sci-tech/energy-and-environment/a-mega-port-in-india-threatens-the-survival-of-the-largest-turtles-on-earth/article66884132.ece"
-          target="_blank">
-          A mega port in India threatens the survival of the largest turtles on Earth | The Hindu | 23/05/23
-        </a>
-
-        <a class="link"
-          href="https://www.hindustantimes.com/india-news/national-green-tribunal-orders-committee-to-review-environmental-clearance-for-great-nicobar-project-concerns-raised-by-appellants-to-be-addressed-101680805975720.html"
-          target="_blank">
-          NGT panel to review green nod for Greater Nicobar project | Hindustan Times | 07/04/23
-        </a>
-
-        <a class="link"
-          href="https://www.livemint.com/news/india/great-nicobar-plan-row-online-ticket-booking-to-andaman-and-nicobar-islands-resumes-no-entry-to-outsiders-11684982888587.html"
-          target="_blank">
-          Great Nicobar plan row: Online ticket booking to Andaman and Nicobar islands resumes | Live Mint | 25/05/23
-        </a>
-
-        <a class="link"
-          href="https://scroll.in/article/1047526/can-a-safari-park-outside-delhi-make-up-for-a-lost-nicobar-forest"
-          target="_blank">
-          Can a safari park outside Delhi make up for a lost Nicobar forest? | Scroll | 19/04/23
-        </a>
-
-        <a class="link"
-          href="https://www.hindustantimes.com/india-news/controversy-surrounds-great-nicobar-township-project-as-tribal-council-withdraws-noc-for-land-diversion-documents-suggest-101681407749046.html"
-          target="_blank">
-          Tribal council withdrew NOC for contentious Nicobar plan | Hindustan Times | 14/04/23
-        </a>
-
-        <a class="link"
-          href="https://www.moneycontrol.com/news/india/congress-slams-centre-after-ngt-forms-panel-to-revisit-environmental-nod-to-nicobar-project-10380951.html"
-          target="_blank">
-          Congress slams centre after NGT forms panel to revisit environmental nod to Nicobar project | Money Control |
-          08/04/23
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/opinion/op-ed/a-grave-mistake-in-great-nicobar/article66645436.ece"
-          target="_blank">
-          A grave mistake in Great Nicobar | The Hindu | 22/03/23
-        </a>
-
-        <a class="link"
-          href="https://frontline.thehindu.com/environment/proposed-infrastructure-project-in-great-nicobar-island-a-mega-folly/article66349362.ece"
-          target="_blank">
-          Proposed infrastructure project in Great Nicobar Island a mega folly | Frontline | 12/01/23
-        </a>
-
-        <a class="link"
-          href="https://frontline.thehindu.com/environment/great-nicobar-development-projects-disregard-risk-in-earthquake-prone-area/article66349616.ece"
-          target="_blank">
-          Great Nicobar development projects disregard risk in earthquake-prone area | Frontline | 12/01/23
-        </a>
-
-        <a class="link"
-          href="https://frontline.thehindu.com/environment/great-nicobar-whose-land-is-it-shompen-and-nicobarese-still-await-return-to-homes-from-temporary-camps/article66349832.ece"
-          target="_blank">
-          Great Nicobar: Whose land is it? | Frontline | 12/01/23
-        </a>
-        
-        <a class="link"
-          href="https://www.thequint.com/explainers/holistic-infrastructure-project-in-great-nicobar-island-to-spell-disaster-for-islands-diverse-ecosystem"
-          target="_blank">
-          What Is The Center's Plan For Great Nicobar Island and Why Is It Troubling? | The Quint | 23/11/22
-        </a>
-
-        <a class="link"
-          href="https://indianexpress.com/article/explained/great-nicobar-development-project-proposal-concerns-8281844/"
-          target="_blank">
-          Development of Great Nicobar: strategic imperative and ecological concerns | Indian Express | 22/11/22
-        </a>
-
-        <a class="link"
-          href="https://www.deccanherald.com/specials/developing-andaman-and-nicobar-islands-a-dilemma-for-delhi-1163716.html?s=09"
-          target="_blank">
-          Developing Andaman and Nicobar Islands: A dilemma for Delhi | Dcecan Herald | 19/11/22
-        </a>
-
-        <a class="link"
-          href="https://scroll.in/article/1037433/despite-red-flags-mega-project-on-ecologically-sensitive-great-nicobar-island-gets-green-signal"
-          target="_blank">
-          Despite red flags, mega project on ecologically-sensitive Great Nicobar island gets green signal | Scroll |
-          15/11/22
-        </a>
-
-        <a class="link"
-          href="https://indianexpress.com/article/india/strategic-important-project-moef-gives-green-clearance-for-centres-rs-72000-crore-project-in-greater-nicobar-island-8259559/"
-          target="_blank">
-          Strategic important project: MoEF gives green clearance for Centre’s Rs 72,000 crore project in Greater
-          Nicobar island | Indian Express | 10/11/22
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/sci-tech/energy-and-environment/great-nicobar-project-gets-in-principle-clearance-for-diversion-of-130-sq-km-of-forest/article66111489.ece#:~:text=The%20Union%20Ministry%20of%20Environment,plant%20and%20a%20greenfield%20township."
-          target="_blank">
-          Great Nicobar project gets in-principle clearance for diversion of 130 sq km of forest | The Hindu | 08/11/22
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/sci-tech/energy-and-environment/great-nicobar-project-gets-in-principle-clearance-for-diversion-of-130-sq-km-of-forest/article66111489.ece"
-          target="_blank">
-          Nicobar project gets assent for diversion of 130 sq km of forest | The Hindu | 08/11/22
-        </a>
-
-        <a class="link"
-          href="https://economictimes.indiatimes.com/industry/transportation/shipping-/-transport/airport-container-depot-township-in-16610-hectares-of-pristine-nicobar-cleared/articleshow/94208294.cms?from=mdr"
-          target="_blank">
-          Airport, container depot, township in 16,610 hectares of pristine Nicobar cleared | ET | 15/09/22
-        </a>
-
-        <a class="link"
-          href="https://frontline.thehindu.com/environment/rampant-tourism-renders-andaman-and-nicobar-islands-more-fragile-than-ever/article65829802.ece/amp/"
-          target="_blank">
-          Rampant tourism renders Andaman and Nicobar Islands more fragile than ever | Frontline | 08/09/22
-        </a>
-
-        <a class="link"
-          href="https://scroll.in/article/1028758/indian-government-is-about-to-irreparably-damage-the-great-nicobar-island-with-its-container-project"
-          target="_blank">
-          Indian government is about to irreparably damage the Great Nicobar Island with its mega project | Scroll |
-          23/07/22
-        </a>
-
-        <a class="link" href="https://roundglasssustain.com/conservations/protecting-leatherback-sea-turtl`es"
-          target="_blank">
-          Leatherback Sea Turtles: Giants of Andaman and Nicobar Islands | Roundglass Sustain | 18/07/22
-        </a>
-
-        <a class="link"
-          href="https://timesofindia.indiatimes.com/rainforests-create-moisture-clouds-and-store-water-human-life-is-embedded-in-them/articleshow/92907320.cms"
-          target="_blank">
-          Importance of Rainforests | TOI | 16/07/22
-        </a>
-
-        <a class="link" href="https://thewire.in/environment/ictt-infrastructure-project-great-nicobar-island"
-          target="_blank">
-          Proposed Megaproject in Great Nicobar Island Could Spell Trouble for Its People, Wildlife | The Wire |
-          12/07/22
-        </a>
-
-        <a class="link" href="https://www.thestatesman.com/bengal/zsi-envisages-restoration-coral-reefs-1503085631.html"
-          target="_blank">
-          ZSI envisages restoration of coral reefs | The Statesman | 29/06/22
-        </a>
-
-        <a class="link"
-          href="http://environmentclearance.nic.in/writereaddata/Form-1A/Minutes/1506202224639431297thEAC(Infra-1)-FinalMoM.pdf"
-          target="_blank">
-          Minutes of the 297th meeting of Expert Appraisal Committee | Ministry Of Environment | 25/05/22
-        </a>
-
-        <a class="link"
-          href="https://theprint.in/environment/govt-vision-for-great-nicobar-includes-airport-township-some-experts-think-its-nonsense/814390/"
-          target="_blank">
-          Govt vision for Great Nicobar includes airport & township, some experts think it’s ‘nonsense’ | The Print |
-          30/01/22
-        </a>
-
-        <a class="link"
-          href="https://www.drishtiias.com/daily-updates/daily-news-analysis/development-project-in-the-great-nicobar-island-iinaccurate-eia"
-          target="_blank">
-          Development Project in the Great Nicobar Island: Inaccurate EIA
-          | Drishti IAS | 27/01/22
-        </a>
-
-        <a class="link"
-          href="https://kalpavriksh.org/wp-content/uploads/2021/12/A-Monumental-Folly_Final-December-2021-2.pdf"
-          target="_blank">
-          A MONUMENTAL FOLLY – Niti Aayog’s development plans for Great Nicobar Island | Kalpavriksh | 18/12/21
-        </a>
-
-        <a class="link" href="https://ijpiel.com/index.php/2021/08/05/niti-aayogs-project-for-great-nicobar-island/"
-          target="_blank">
-          NITI Aayog's Projectfor Great Nicobar Island | IJPIEL | 05/08/21
-        </a>
-
-        <a class="link"
-          href="https://science.thewire.in/politics/government/wildlife-institute-feeds-doubt-about-fate-of-leatherback-turtles-on-an-islands/amp/ "
-          target="_blank">
-          After Approving Nicobar Sanctuary Denotification, WII Says No Expertise | The Wire | 16/07/21
-        </a>
-
-        <a class="link"
-          href="https://www.thehindu.com/sci-tech/energy-and-environment/green-panel-allows-great-nicobar-plan-to-advance/article34521310.ece/amp/ "
-          target="_blank">
-          Green panel allows Great Nicobar plan to advance | The Hindu | 10/05/21
-        </a>
-
-        <a class="link"
-          href="http://environmentclearance.nic.in/DownloadPfdFile.aspx?FileName=mfeaYaYbdxRbeR8PGLUycwXyG0OWE2QWwm72WXjOAxHQbrEhaMSFRfBrbP1c1ckmdhZ1B7qes6LgOQOuwF2N5mJ2kxDbKrCShi1WB4/MMxE=&FilePath=93ZZBm8LWEXfg+HAlQix2fE2t8z/pgnoBhDlYdZCxzXmG8GlihX6H9UP1HygCn3pCkAF2zPFXFQNqA4krKa1Aw=="
-          target="_blank">
-          Pre-Feasibility Report | Holistic Development of
-          Great Nicobar Island at
-          Andaman & Nicobar Islands | Ministry Of Environment | 01/03/21
-        </a>
-
-        <a class="link"
-          href="http://environmentclearance.nic.in/writereaddata/Form-1A/Minutes/01032021Y90QD9KXApproved7thEACThermal15-02-2021.pdf"
-          target="_blank">
-          Minutes of the 7th Meeting of the Re-Constituted Expert Appraisal Committee (EAC) on
-          Environmental Impact Assessment (EIA) of Thermal Power Projects | Ministry Of Environment | 15/02/21
-        </a>
-
-        <a class="link" href="https://zsi.gov.in/WriteReadData/userfiles/file/Latest%20News/hindusthan%201_1_16.pdf"
-          target="_blank">
-          Indian scientists breathe new life into dead Kutch corals | HT | 01/01/16
-        </a>
-
-
-        <br>
-
-        <div class="org-logo row">
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/extinctionrebellionIndia-removebg-preview.png" alt="ebi"
-              loading="lazy" />
-            <a class="img-link">
-              Extinction Rebellion India
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/youth4climate-removebg-preview.png" alt="yfci" loading="lazy" />
-            <a class="img-link" target="_blank"
-              href="https://twitter.com/Youth4ClimateIn?t=RrSCqKC_PPaIcarqUNkAKA&s=09">
-              Youth For Climate India
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/badassBrownFeminist.jpg" alt="bbf" loading="lazy" />
-            <a class="img-link" target="_blank"
-              href="https://www.instagram.com/badassbrownfeminist_/?igshid=YmMyMTA2M2Y%3D">
-              Badass Brown Feminist
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/rotaract_usme.jpg" alt="rc" loading="lazy" />
-            <a class="img-link" target="_blank" href="https://twitter.com/rotaractusme">
-              Rotaract Club of USME
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/myrighttobreathe-removebg-preview.png" alt="mrtb" loading="lazy" />
-            <a class="img-link">
-              My Right To Breathe
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/dts.jpg" alt="dts" loading="lazy" />
-            <a class="img-link" target="_blank" href="https://twitter.com/DelhiTreesSOS?t=KjNutEnbT2sPyJWhQ19xWQ&s=09">
-              Delhi Trees SOS
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/ffi.jpg" alt="ffi" loading="lazy" />
-            <a class="img-link" target="_blank" href="https://twitter.com/fridays_india?t=3iDN3s-vKiJKRhziSAk6tw&s=09">
-              @fridays_india
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/nitara.jpg" alt="nitara" loading="lazy" />
-            <a class="img-link" target="_blank" href="https://twitter.com/nitara_in">
-              Nitara
-            </a>
-          </div>
-          <div class="org-img-div column">
-            <img class="org-img" src="pictures/fffi.jpg" alt="fffi" loading="lazy" />
-            <a class="img-link" target="_blank" href="https://www.instagram.com/fridaysforfuture.india/">
-              @FFFIndia
-            </a>
-          </div>
-
-          <div class="org-img-div column">
-            <img class="org-img" style="background-color: black;" src="pictures/zerosehero.png" alt="zsh"
-              loading="lazy" />
-            <a class="img-link" target="_blank" href="https://instagram.com/zeroseheroyka?igshid=YmMyMTA2M2Y=o">
-              Zero se Hero
-            </a>
-          </div>
+    <h1 class="page-title">Save Nicobar</h1>
+    
+    <div class="campaign-card">
+        <!-- Swiper Carousel -->
+        <div class="swiper">
+            <div class="swiper-wrapper"><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/a.png" alt="Save Nicobar image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/b.png" alt="Save Nicobar image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/c.png" alt="Save Nicobar Image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/d.png" alt="Save Nicobar Image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/e.png" alt="Save Nicobar Image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/f.png" alt="Save Nicobar Image" loading="lazy"></div><div class="swiper-slide"><img src="https://savenicobar.thereisnoearthb.com/pictures/g.png" alt="Save Nicobar Image" loading="lazy"></div></div>
+            <div class="swiper-pagination"></div>
         </div>
-      </div>
+        
+        <!-- Card Content -->
+        <div class="card-content">
+            <div class="card-text"><p>A Citizens' appeal for the rollback of the proposed mega infrastructure project on Great Nicobar Island which involves the construction of a transshipment hub and other interlinked projects which are to come up on the eastern side of the Great Nicobar Island, including Galathea Bay.</p><p><br></p><p>2,281+ people have sent the email so far, send yours now! ✊</p><p><br></p><p>Act now ↓</p></div>
+        </div>
+        
+        <!-- Social Buttons -->
+        <div class="social-buttons">
+            <a href="https://savenicobar.thereisnoearthb.com/mail.html" target="_blank" class="social-btn email-btn" rel="noopener noreferrer" aria-label="Email Petition">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://twitter.com/intent/tweet/?text=Save%209.64%20Lakh%20Trees%20from%20being%20felled%20in%20India%27s%20rainforest.%0A%0AJoin%202,281%2B%20people%20and%20%23SaveNicobar%20by%20sending%20an%20email%20to%20@moefcc%20now!%0A%0ASend%20Your%20Mail%20here%20%F0%9F%91%87%F0%9F%8F%BD%20%0A%0Ahttps://t.co/bziqGgZLKa%20https://t.co/FC5Fvh7mRX" target="_blank" class="social-btn twitter-btn" rel="noopener noreferrer" aria-label="Tweet Button">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://tinyurl.com/WhatsAppAboutNicobar" target="_blank" class="social-btn whatsapp-btn" rel="noopener noreferrer" aria-label="WhatsApp Button">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.canva.com/design/DAFSLa6Au3E/KtZbox5bghVTM9PVM3z2RA/view?utm_content=DAFSLa6Au3E&amp;utm_campaign=designshare&amp;utm_medium=link&amp;utm_source=publishsharelink&amp;mode=preview" target="_blank" class="social-btn instagram-btn" rel="noopener noreferrer" aria-label="Instagram Button">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
     </div>
-
-    <div class="links">
-
-
-      <!--<a  class="link" href="mail.html" target="_blank"><img src="https://thereisnoearthb.com/icons/undraw_black_lives_matter_rndk.svg" alt="Petition graphic" width="90vw" height="145"><br></button>
--->
-      <br>
-      <!--<a class="link" id = "Footer credits" href="https://thereisnoearthb.com" target="_blank"></a>
-         -->
-      <br>
-
-
-
-      <!--</center>
--->
-
-
-
-    </div>
-
-    <!--<a class="link" id="Button16" href="https://thereisnoearthb.com" target="_blank">This open source website has been created by There Is No Earth B for #SaveNicobar which controls the content. We do not have any political, religious or monetary affilitations. With anyone.</a>-->
-    </header>
-    <script type="text/javascript">
-      var emailSent = '2,281';
-      document.getElementById('emailInput').innerHTML = emailSent;
-      document.addEventListener('DOMContentLoaded', function () {
-        M.AutoInit();
-
-        var options = {
-          fullWidth: true,
-          indicators: true
-        };
-        var elems = document.querySelector('.carousel.no-autoinit');
-        console.log(elems);
-        var instances = M.Carousel.init(elems, options);
-      })
-      document.getElementById('tweet-quote').setAttribute('href', 'https://twitter.com/intent/tweet/?text=' + "Save 9.64 Lakh Trees from being felled in India's rainforest.%0A%0AJoin " + emailSent + "%2B people and %23SaveNicobar by sending an email to @moefcc now!%0A%0ASend Your Mail here 👇🏽 %0A%0Ahttps://t.co/bziqGgZLKa https://t.co/FC5Fvh7mRX");
+    
+    <!-- Link Buttons -->
+    
+    
+    
+    
+    <!-- External JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.swiper', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                touchEventsTarget: 'container',
+                a11y: {
+                    enabled: true
+                }
+            });
+        });
     </script>
-</body>
 
-<!-- Compiled and minified JavaScript -->
-<script src="https://thereisnoearthb.com/js/materialize.js"></script>
 
-</html>
+
+
+<a class="link-button" target="_blank" rel="noopener noreferrer" href="https://thereisnoearthb.org/blurbs/open-letter-to-andaman-nicobar-administration">Open letter: Objections and Comments to the draft SIA report</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://forms.gle/1wR9mSkKJgUNmbMDA">Join the #SaveNicobar Postcards Campaign</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://pages.razorpay.com/SaveGreatNicobar">Donate or help raise funds for the #SaveNicobar Postcards Campaign</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://geographical.co.uk/culture/shompen-india-government-genocide-great-nicobar-island">‘It will destroy them’: Indian mega-development could cause ‘genocide’ and ‘ecocide’, says charity | Geographical | 08/02/24</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://m.thewire.in/article/rights/death-knell-for-shompen-people-genocide-experts-urge-president-to-stop-great-nicobar-mega-project">'Death Knell for Shompen People': Genocide Experts Urge President to Stop Great Nicobar Mega Project | The Wire | 07/02/24</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.steelorbis.com/steel-news/latest-news/india-announces-5-billion-project-to-build-transhipment-port-at-nicobar-islands-1316643.htm">India announces $5 billion project to build transhipment port at Nicobar Islands | Steel Orbis | 28/11/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://countercurrents.org/2023/11/the-great-nicobar-island-mega-project-and-the-recent-amendment-to-the-forest-conservation-act-in-violation-of-the-supreme-courts-directions/">The Great Nicobar Island mega project and the recent amendment to the Forest (Conservation) Act in violation of the Supreme Court’s directions | Counter Currents | 27/11/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://feminisminindia.com/2023/08/03/indigenous-ecologies-exploitative-tourism-great-nicobar-goa/">Currents | 27/11/23 Indigenous Ecologies And Exploitative Tourism: The Case Of Great Nicobar, Nagarahole, Goa And Other “Protected” Regions | Feminism in India | 03/08/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/news/national/india-adds-664-animal-species-to-its-faunal-database-in-2022-339-taxa-to-its-flora/article67030167.ece">India adds 664 animal species to its faunal database in 2022, 339 taxa to its flora | The Hindu | 01/07/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/sci-tech/energy-and-environment/a-mega-port-in-india-threatens-the-survival-of-the-largest-turtles-on-earth/article66884132.ece">A mega port in India threatens the survival of the largest turtles on Earth | The Hindu | 23/05/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.hindustantimes.com/india-news/national-green-tribunal-orders-committee-to-review-environmental-clearance-for-great-nicobar-project-concerns-raised-by-appellants-to-be-addressed-101680805975720.html">NGT panel to review green nod for Greater Nicobar project | Hindustan Times | 07/04/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.livemint.com/news/india/great-nicobar-plan-row-online-ticket-booking-to-andaman-and-nicobar-islands-resumes-no-entry-to-outsiders-11684982888587.html">Great Nicobar plan row: Online ticket booking to Andaman and Nicobar islands resumes | Live Mint | 25/05/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://scroll.in/article/1047526/can-a-safari-park-outside-delhi-make-up-for-a-lost-nicobar-forest">Can a safari park outside Delhi make up for a lost Nicobar forest? | Scroll | 19/04/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.hindustantimes.com/india-news/controversy-surrounds-great-nicobar-township-project-as-tribal-council-withdraws-noc-for-land-diversion-documents-suggest-101681407749046.html">Tribal council withdrew NOC for contentious Nicobar plan | Hindustan Times | 14/04/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.moneycontrol.com/news/india/congress-slams-centre-after-ngt-forms-panel-to-revisit-environmental-nod-to-nicobar-project-10380951.html">Congress slams centre after NGT forms panel to revisit environmental nod to Nicobar project | Money Control | 08/04/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/opinion/op-ed/a-grave-mistake-in-great-nicobar/article66645436.ece">A grave mistake in Great Nicobar | The Hindu | 22/03/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://frontline.thehindu.com/environment/proposed-infrastructure-project-in-great-nicobar-island-a-mega-folly/article66349362.ece">Proposed infrastructure project in Great Nicobar Island a mega folly | Frontline | 12/01/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://frontline.thehindu.com/environment/great-nicobar-development-projects-disregard-risk-in-earthquake-prone-area/article66349616.ece">Great Nicobar development projects disregard risk in earthquake-prone area | Frontline | 12/01/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://frontline.thehindu.com/environment/great-nicobar-whose-land-is-it-shompen-and-nicobarese-still-await-return-to-homes-from-temporary-camps/article66349832.ece">Great Nicobar: Whose land is it? | Frontline | 12/01/23</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thequint.com/explainers/holistic-infrastructure-project-in-great-nicobar-island-to-spell-disaster-for-islands-diverse-ecosystem">What Is The Center's Plan For Great Nicobar Island and Why Is It Troubling? | The Quint | 23/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://indianexpress.com/article/explained/great-nicobar-development-project-proposal-concerns-8281844/">Development of Great Nicobar: strategic imperative and ecological concerns | Indian Express | 22/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.deccanherald.com/specials/developing-andaman-and-nicobar-islands-a-dilemma-for-delhi-1163716.html?s=09">Developing Andaman and Nicobar Islands: A dilemma for Delhi | Dcecan Herald | 19/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://scroll.in/article/1037433/despite-red-flags-mega-project-on-ecologically-sensitive-great-nicobar-island-gets-green-signal">Despite red flags, mega project on ecologically-sensitive Great Nicobar island gets green signal | Scroll | 15/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://indianexpress.com/article/india/strategic-important-project-moef-gives-green-clearance-for-centres-rs-72000-crore-project-in-greater-nicobar-island-8259559/">Strategic important project: MoEF gives green clearance for Centre’s Rs 72,000 crore project in Greater Nicobar island | Indian Express | 10/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/sci-tech/energy-and-environment/great-nicobar-project-gets-in-principle-clearance-for-diversion-of-130-sq-km-of-forest/article66111489.ece#:~:text=The%20Union%20Ministry%20of%20Environment,plant%20and%20a%20greenfield%20township.">Great Nicobar project gets in-principle clearance for diversion of 130 sq km of forest | The Hindu | 08/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/sci-tech/energy-and-environment/great-nicobar-project-gets-in-principle-clearance-for-diversion-of-130-sq-km-of-forest/article66111489.ece">Nicobar project gets assent for diversion of 130 sq km of forest | The Hindu | 08/11/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://economictimes.indiatimes.com/industry/transportation/shipping-/-transport/airport-container-depot-township-in-16610-hectares-of-pristine-nicobar-cleared/articleshow/94208294.cms?from=mdr">Airport, container depot, township in 16,610 hectares of pristine Nicobar cleared | ET | 15/09/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://frontline.thehindu.com/environment/rampant-tourism-renders-andaman-and-nicobar-islands-more-fragile-than-ever/article65829802.ece/amp/">Rampant tourism renders Andaman and Nicobar Islands more fragile than ever | Frontline | 08/09/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://scroll.in/article/1028758/indian-government-is-about-to-irreparably-damage-the-great-nicobar-island-with-its-container-project">Indian government is about to irreparably damage the Great Nicobar Island with its mega project | Scroll | 23/07/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://roundglasssustain.com/conservations/protecting-leatherback-sea-turtl%60es">Leatherback Sea Turtles: Giants of Andaman and Nicobar Islands | Roundglass Sustain | 18/07/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://timesofindia.indiatimes.com/rainforests-create-moisture-clouds-and-store-water-human-life-is-embedded-in-them/articleshow/92907320.cms">Importance of Rainforests | TOI | 16/07/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://thewire.in/environment/ictt-infrastructure-project-great-nicobar-island">Proposed Megaproject in Great Nicobar Island Could Spell Trouble for Its People, Wildlife | The Wire | 12/07/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thestatesman.com/bengal/zsi-envisages-restoration-coral-reefs-1503085631.html">ZSI envisages restoration of coral reefs | The Statesman | 29/06/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="http://environmentclearance.nic.in/writereaddata/Form-1A/Minutes/1506202224639431297thEAC(Infra-1)-FinalMoM.pdf">Minutes of the 297th meeting of Expert Appraisal Committee | Ministry Of Environment | 25/05/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://theprint.in/environment/govt-vision-for-great-nicobar-includes-airport-township-some-experts-think-its-nonsense/814390/">Govt vision for Great Nicobar includes airport &amp; township, some experts think it’s ‘nonsense’ | The Print | 30/01/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.drishtiias.com/daily-updates/daily-news-analysis/development-project-in-the-great-nicobar-island-iinaccurate-eia">Development Project in the Great Nicobar Island: Inaccurate EIA | Drishti IAS | 27/01/22</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://kalpavriksh.org/wp-content/uploads/2021/12/A-Monumental-Folly_Final-December-2021-2.pdf">A MONUMENTAL FOLLY – Niti Aayog’s development plans for Great Nicobar Island | Kalpavriksh | 18/12/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://ijpiel.com/index.php/2021/08/05/niti-aayogs-project-for-great-nicobar-island/">NITI Aayog's Projectfor Great Nicobar Island | IJPIEL | 05/08/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://science.thewire.in/politics/government/wildlife-institute-feeds-doubt-about-fate-of-leatherback-turtles-on-an-islands/amp/">After Approving Nicobar Sanctuary Denotification, WII Says No Expertise | The Wire | 16/07/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://www.thehindu.com/sci-tech/energy-and-environment/green-panel-allows-great-nicobar-plan-to-advance/article34521310.ece/amp/">Green panel allows Great Nicobar plan to advance | The Hindu | 10/05/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="http://environmentclearance.nic.in/DownloadPfdFile.aspx?FileName=mfeaYaYbdxRbeR8PGLUycwXyG0OWE2QWwm72WXjOAxHQbrEhaMSFRfBrbP1c1ckmdhZ1B7qes6LgOQOuwF2N5mJ2kxDbKrCShi1WB4/MMxE=&amp;FilePath=93ZZBm8LWEXfg+HAlQix2fE2t8z/pgnoBhDlYdZCxzXmG8GlihX6H9UP1HygCn3pCkAF2zPFXFQNqA4krKa1Aw==">Pre-Feasibility Report | Holistic Development of Great Nicobar Island at Andaman &amp; Nicobar Islands | Ministry Of Environment | 01/03/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="http://environmentclearance.nic.in/writereaddata/Form-1A/Minutes/01032021Y90QD9KXApproved7thEACThermal15-02-2021.pdf">Minutes of the 7th Meeting of the Re-Constituted Expert Appraisal Committee (EAC) on Environmental Impact Assessment (EIA) of Thermal Power Projects | Ministry Of Environment | 15/02/21</a><a class="link-button" target="_blank" rel="noopener noreferrer" href="https://zsi.gov.in/WriteReadData/userfiles/file/Latest%20News/hindusthan%201_1_16.pdf">Indian scientists breathe new life into dead Kutch corals | HT | 01/01/16</a></body></html>
