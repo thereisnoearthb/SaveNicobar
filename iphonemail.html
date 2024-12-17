@@ -87,10 +87,10 @@
     <li><strong>Scrap the project in its current form</strong> due to multiple ecological and human rights concerns and identify an alternative project site with the least environmental impact and without violation of community rights.</li>
   </ul>
   <br>
-  <p>Eagerly anticipating an immediate, careful, and most urgent consideration of the above matter from your end.</p>
-  <p>In Solidarity<br />An environmentally conscious and concerned citizen.</p>
   <br>
 </div>
+<p>Eagerly anticipating an immediate, careful, and most urgent consideration of the above matter from your end.</p>
+<p>In Solidarity<br />An environmentally conscious and concerned citizen.</p>
 <em>
 <p>Sources and Important Reads:</p>
 <ol>
@@ -151,16 +151,16 @@
         const BodyOfEmail = document.getElementById("main-body").innerText;
 
         const EndingLine = [
-          'In Solidarity An environmentally conscious and concerned Indian',
-          'In Solidarity A Concerned Citizen',
+          'In Solidarity\nAn environmentally conscious and concerned Indian',
+          'In Solidarity\nA Concerned Citizen',
           'A Concerned Indian',
-          'Sincerely Concerned Citizen'
+          'Sincerely\nConcerned Citizen'
         ];
 
         const sub = parseInt(Math.random() * SubjectLine.length);
         const Oline = parseInt(Math.random() * OpeningLine.length);
         const Eline = parseInt(Math.random() * EndingLine.length);
-        const body = `${OpeningLine[Oline]}'\n\n'${SubjectLine[sub]}${BodyOfEmail}${EndingLine[Eline]}`;
+        const body = `${OpeningLine[Oline]}'\n\n'${SubjectLine[sub]}'\n\n'${BodyOfEmail}${EndingLine[Eline]}`;
 
         const message = `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${encoder(SubjectLine[sub])}&body=${encoder(body)}`;
         location.href = message;
