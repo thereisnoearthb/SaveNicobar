@@ -145,7 +145,7 @@
         ];
 
         const OpeningLine = [
-          "To,%0AShri Bhupender Yadav%0AMinister of Environment",
+          "To,\nShri Bhupender Yadav\nMinister of Environment",
         ];
 
         const BodyOfEmail = document.getElementById("main-body").innerText;
@@ -160,7 +160,7 @@
         const sub = parseInt(Math.random() * SubjectLine.length);
         const Oline = parseInt(Math.random() * OpeningLine.length);
         const Eline = parseInt(Math.random() * EndingLine.length);
-        const body = `${OpeningLine[Oline]}%0A%0A${SubjectLine[sub]}${BodyOfEmail}${EndingLine[Eline]}`;
+        const body = `${OpeningLine[Oline]}'\n\n'${SubjectLine[sub]}${BodyOfEmail}${EndingLine[Eline]}`;
 
         const message = `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${encoder(SubjectLine[sub])}&body=${encoder(body)}`;
         location.href = message;
