@@ -46,7 +46,7 @@
 <p>Shri Bhupender Yadav<br />Minister of State for Environment, Forests<br />&amp; Climate Change<br />Indira Paryavaran Bhawan<br />166, Jor Bagh Road, Block 17<br />Lodhi Colony, New Delhi &ndash; 110003</p>
 <p>AND</p>
 <p>Ms. Leena Nandan<br />Secretary, Office of the Minister of State for<br />Environment, Forests &amp; Climate Change<br />Indira Paryavaran Bhawan<br />166, Jor Bagh Road, Block 17<br />Lodhi Colony, New Delhi &ndash; 110003</p>
-<p id="subject"><strong>Sub:</strong>&nbsp;<u>Request to withdraw the proposed project for 'Holistic Development of Great Nicobar Island in Andaman &amp; Nicobar Islands</u></p>
+<p id="subject"><strong>Sub:</strong><u>Request to withdraw the proposed project for 'Holistic Development' of Great Nicobar Island in Andaman &amp; Nicobar Islands</u></p>
 <div id="main-body">
   <p>Most Respectfully,</p>
   <p>The Great Nicobar Island, harbouring one of the richest repositories of biodiversity in the whole of South and Southeast Asia, might soon be history, as the project  titled "Holistic Development of Great Nicobar Island" has been proposed and has quickly started progress as probably the most ambitious project undertaken in the area. This initiative aims to turn the mostly remote and untouched Great Nicobar Island into a transshipment port and tourism hotspot. The suggested plans are to make - an international Container Transhipment Terminal, a Greenfield Airport, Great Nicobar Gas and Solar Power Plant and two new Greenfield Coastal Cities. 
@@ -141,7 +141,7 @@
         const bcc = "solidarity@thereisnoearthb.com";
 
         const SubjectLine = [
-          document.getElementById("subject").innerText
+          document.getElementById("subject").innerText.replace("Sub:", "")
         ];
 
         const OpeningLine = [
@@ -160,7 +160,7 @@
         const sub = parseInt(Math.random() * SubjectLine.length);
         const Oline = parseInt(Math.random() * OpeningLine.length);
         const Eline = parseInt(Math.random() * EndingLine.length);
-        const body = `${OpeningLine[Oline]}'\n\n'${SubjectLine[sub]}'\n\n'${BodyOfEmail}${EndingLine[Eline]}`;
+        const body = `${OpeningLine[Oline]}\n\n${SubjectLine[sub]}\n\n${BodyOfEmail}${EndingLine[Eline]}`;
 
         const message = `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${encoder(SubjectLine[sub])}&body=${encoder(body)}`;
         location.href = message;
