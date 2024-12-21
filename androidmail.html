@@ -159,7 +159,7 @@
         const sub = parseInt(Math.random() * SubjectLine.length);
         const Oline = parseInt(Math.random() * OpeningLine.length);
         const Eline = parseInt(Math.random() * EndingLine.length);
-        const body = `${OpeningLine[Oline]}\n\n${SubjectLine[sub]}\n\n${BodyOfEmail}${EndingLine[Eline]}`;
+        const body = `${OpeningLine[Oline]}\n\nSub: ${SubjectLine[sub]}\n\n${BodyOfEmail}${EndingLine[Eline]}`;
 
         const message = `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${encoder(SubjectLine[sub])}&body=${encoder(body)}`;
         location.href = message;
