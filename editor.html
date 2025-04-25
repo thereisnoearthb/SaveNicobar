@@ -221,6 +221,9 @@
                 <input type="text" id="image${index}-input" placeholder="Image ${index} URL">
                 <input type="text" id="image${index}-alt-input" placeholder="Image ${index} Alt Text">
             `;
+            div.querySelectorAll("input").forEach((input) => {
+                input.addEventListener("input", updatePreview);
+            });
             return div;
         }
 
@@ -231,6 +234,9 @@
                 <input type="text" class="button-text" placeholder="Button ${index} Text">
                 <input type="url" class="button-link" placeholder="Button ${index} Link">
             `;
+            div.querySelectorAll("input").forEach((input) => {
+                input.addEventListener("input", updatePreview);
+            });
             return div;
         }
 
@@ -491,7 +497,7 @@
                 alert('Please load an HTML file first');
                 return;
             }
-            
+
             // Prepend doctype to the HTML content
             const pageContent = `<!DOCTYPE html>\n${previewFrame.srcdoc}`;
 
