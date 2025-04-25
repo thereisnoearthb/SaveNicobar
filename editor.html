@@ -425,15 +425,22 @@
             document.getElementById('instagram-link-input').value = socialLinks.instagram ? socialLinks.instagram.href : '';
 
             // Update buttons
-            const buttons = doc.querySelectorAll('.link-button');
+            const buttonWrapper = doc.getElementById("link-button-wrapper");
+            const buttons = buttonWrapper ? buttonWrapper.querySelectorAll(".link-button") : []; // Find buttons inside the wrapper
+
+            // Clear existing button inputs in the editor
+            buttonContainer.innerHTML = "";
+
+            // Create editor inputs based on template buttons
             buttons.forEach((button, index) => {
-                const buttonGroup = buttonContainer.querySelectorAll('.button-group')[index];
-                if (buttonGroup) {
-                    const buttonTextInput = buttonGroup.querySelector('.button-text');
-                    const buttonLinkInput = buttonGroup.querySelector('.button-link');
-                    if (buttonTextInput) buttonTextInput.value = button.textContent.trim();
-                    if (buttonLinkInput) buttonLinkInput.value = button.href;
-                }
+                const div = createButtonInputs(index + 1);
+                const buttonTextInput = div.querySelector(".button-text");
+                const buttonLinkInput = div.querySelector(".button-link");
+                if (buttonTextInput)
+                    buttonTextInput.value = button.textContent.trim();
+                if (buttonLinkInput)
+                    buttonLinkInput.value = button.href;
+                buttonContainer.appendChild(div);
             });
 
             updatePreview();
@@ -500,27 +507,45 @@
             if (socialLinks.instagram) socialLinks.instagram.href = document.getElementById('instagram-link-input').value;
 
             // Update Buttons
-            const buttonsContainer = doc.querySelector('.link-button').parentNode;
-            if (buttonsContainer) {
-                // Remove existing buttons
-                doc.querySelectorAll('.link-button').forEach(btn => btn.remove());
-                
-                // Add all current buttons
-                const buttonGroups = buttonContainer.querySelectorAll('.button-group');
-                buttonGroups.forEach(group => {
-                    const textInput = group.querySelector('.button-text');
-                    const linkInput = group.querySelector('.button-link');
-                    
-                    if (textInput && linkInput) {
-                        const button = document.createElement('a');
-                        button.className = 'link-button';
-                        button.target = '_blank';
-                        button.rel = 'noopener noreferrer';
-                        button.href = linkInput.value || '#';
-                        button.textContent = textInput.value || '';
-                        buttonsContainer.appendChild(button);
+            const buttonWrapper = doc.getElementById("link-button-wrapper");
+            if (buttonWrapper) {
+                buttonWrapper.innerHTML = "";
+
+                // Get button data from the editor's input fields
+                const buttonGroups = document
+                    .getElementById("button-groups-container").querySelectorAll(".button-group");
+
+                buttonGroups.forEach((group, index) => {
+                    const textInput = group.querySelector(".button-text");
+                    const linkInput = group.querySelector(".button-link");
+
+                    // Only add if text or link has a value
+                    if ( textInput && linkInput && (textInput.value.trim() || linkInput.value.trim()) ) {
+                        const button = document.createElement("a");
+                        button.className = "link-button";
+                        button.target = "_blank";
+                        button.rel = "noopener noreferrer";
+                        button.href = linkInput.value || "#";
+                        button.textContent = textInput.value || "";
+
+                        if (index > 0) {
+                            buttonWrapper.appendChild(document.createTextNode("\n  "));
+                        } else {
+                            buttonWrapper.appendChild(document.createTextNode("\n  "));
+                        }
+
+                        // Append the actual button
+                        buttonWrapper.appendChild(button);
                     }
                 });
+
+                // Formatting the .link-buttons into separate lines
+                if (buttonGroups.length > 0 && buttonWrapper.childNodes.length > 0) {
+                    buttonWrapper.appendChild(document.createTextNode("\n"));
+                }
+            }
+            else {
+                console.warn("Could not find #link-button-wrapper in the template. Buttons cannot be updated.");
             }
 
             previewFrame.srcdoc = doc.documentElement.outerHTML;
