@@ -253,12 +253,29 @@
         function createImageInputs(index) {
             const div = document.createElement('div');
             div.className = 'image-upload-container';
+            div.draggable = true; // Make draggable
+            div.dataset.index = index; // Store original index
+
             div.innerHTML = `
+                <span class="drag-handle">☰</span>
                 <input type="text" id="image${index}-input" placeholder="Image ${index} URL">
                 <input type="text" id="image${index}-alt-input" placeholder="Image ${index} Alt Text">
+                <button class="delete-btn" title="Delete button">×</button>
             `;
             div.querySelectorAll("input").forEach((input) => {
                 input.addEventListener("input", updatePreview);
+            });
+
+            // Add drag event listeners
+            div.addEventListener("dragstart", handleDragStart);
+            div.addEventListener("dragover", handleDragOver);
+            div.addEventListener("drop", handleDrop);
+            div.addEventListener("dragend", handleDragEnd);
+
+            // Add delete button listener
+            div.querySelector(".delete-btn").addEventListener("click", () => {
+                div.remove();
+                updatePreview();
             });
             return div;
         }
@@ -451,13 +468,16 @@
                 
                 // Add all current images
                 const imageInputs = imageContainer.querySelectorAll('.image-upload-container');
-                imageInputs.forEach((container, index) => {
-                    const urlInput = container.querySelector(`#image${index + 1}-input`);
-                    const altInput = container.querySelector(`#image${index + 1}-alt-input`);
-                    
-                    const slide = document.createElement('div');
-                    slide.className = 'swiper-slide';
-                    slide.innerHTML = `<img src="${urlInput.value || ''}" alt="${altInput.value || `Campaign Image ${index + 1}`}" loading="lazy">`;
+                imageInputs.forEach((container) => {
+                    // Find inputs within each container
+                    const inputs = container.querySelectorAll("input[type='text']");
+                    const urlInput = inputs[0];
+                    const altInput = inputs[1];
+
+                    const slide = document.createElement("div");
+                    slide.className = "swiper-slide";
+                    slide.innerHTML = `<img src="${urlInput.value || ""}" 
+                                        alt="${altInput.value || `Campaign Image`}" loading="lazy">`;
                     swiperWrapper.appendChild(slide);
                 });
             }
